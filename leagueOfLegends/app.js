@@ -16,9 +16,9 @@ app.get("/", (req,res) => {
 });
 
 app.get("/results", (req, res) => {
-    var searchterm = req.query.challengerQueue;
-    var apiKey = "?api_key=RGAPI-00d1b399-00a3-41f2-9474-8dafc24d17a0";
-    var url1 = "https://na1.api.riotgames.com/lol/league/v4/challengerleagues/by-queue/";
+    var searchterm = req.query.summonerName;
+    var apiKey = "?api_key=*insert key here*";
+    var url1 = "https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/";
     var url = url1 + searchterm + apiKey;
     request(url, (error, response, body) => {
         if(!error && response.statusCode === 200){
