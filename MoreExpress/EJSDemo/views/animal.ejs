@@ -1,0 +1,20 @@
+<!-- header code -->
+<% include partials/header.ejs %>
+
+<h1>This is the animal home page.</h1>
+<h3>You are viewing the home page of the specific animal: <%= animal %></h3>
+
+<% if (animal === "dog") { %>
+    <p>The animal you selected is a dog</p>
+<% } else { %>
+    <p>The animal you selected is not a dog</p>
+<%    } %>
+
+<h1>List of books</h1>
+
+<% list.forEach(function(list){ %>
+    <li><%= list.title %> - <%= list.author %> - <%= list.description %></li>
+<% }); %>
+
+<!-- footer code -->
+<% include partials/footer.ejs %>
